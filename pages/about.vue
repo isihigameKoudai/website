@@ -6,7 +6,7 @@
     <StaticCard>
       {{
         $t(
-          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、青森県が開設したものです。'
+          '当サイトは青森県内の新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するためのサイトです。'
         )
       }}<br />
       <br />
@@ -151,7 +151,7 @@
       <p>
         {{
           $t(
-            '当サイトに掲載されている情報の正確性については万全を期していますが、青森県は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
+            '当サイトに掲載されている情報の正確性については万全を期していますが、サイト運営者および青森県は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
           )
         }}
       </p>
@@ -171,22 +171,6 @@
       </p>
     </StaticCard>
     <StaticCard>
-      <h3>{{ $t('データについて') }}</h3>
-      <i18n
-        tag="p"
-        path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）"
-      >
-        <a
-          href="https://portal.data.metro.tokyo.lg.jp/"
-          target="_blank"
-          rel="noopener"
-          place="catalogWebsite"
-        >
-          {{ $t('青森県オープンデータカタログサイト') }}
-        </a>
-      </i18n>
-    </StaticCard>
-    <StaticCard>
       <h3>{{ $t('ソースコードについて') }}</h3>
       <p>
         {{
@@ -196,7 +180,7 @@
         }}
         <i18n path="詳しくは、{githubRepo}をご確認ください。">
           <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/covid19-aomori/website"
             target="_blank"
             rel="noopener"
             place="githubRepo"

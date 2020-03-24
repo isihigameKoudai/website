@@ -13,12 +13,12 @@
       </div>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <static-info
-      class="mb-4"
-      :url="localePath('/flow')"
-      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
-      :btn-text="$t('相談の手順を見る')"
-    />
+    <!--    <static-info-->
+    <!--      class="mb-4"-->
+    <!--      :url="localePath('/flow')"-->
+    <!--      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"-->
+    <!--      :btn-text="$t('相談の手順を見る')"-->
+    <!--    />-->
     <v-row class="DataBlock">
       <!-- <confirmed-cases-details-card /> -->
       <!-- <tested-cases-details-card /> -->
@@ -41,7 +41,7 @@ import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
-import StaticInfo from '@/components/StaticInfo.vue'
+// import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/data.json'
 import News from '@/data/news.json'
 // import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
@@ -62,7 +62,7 @@ export default Vue.extend({
   components: {
     PageHeader,
     WhatsNew,
-    StaticInfo,
+    // StaticInfo,
     // ConfirmedCasesDetailsCard,
     // TestedCasesDetailsCard,
     ConfirmedCasesNumberCard,
@@ -81,7 +81,7 @@ export default Vue.extend({
       Data,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: this.$t('県内の最新感染動向')
+        title: this.$t('県内の最新感染動向【有志作成版】')
       },
       newsItems: News.newsItems
     }
@@ -94,7 +94,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('県内の最新感染動向') as string
+      title: this.$t('県内の最新感染動向【有志作成版】') as string
     }
   }
 })

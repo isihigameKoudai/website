@@ -13,7 +13,7 @@
           <img
             class="SideNavigation-HeaderLogo"
             src="/logo.svg"
-            :alt="$t('東京都')"
+            :alt="$t('青森県')"
           />
           <div class="SideNavigation-HeaderText">
             {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
@@ -48,6 +48,7 @@
 
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
+          <!--
           <a
             href="https://line.me/R/ti/p/%40822sysfc"
             target="_blank"
@@ -59,8 +60,9 @@
               <img src="/line.png" alt="LINE" />
             </picture>
           </a>
+          -->
           <a
-            href="https://twitter.com/tokyo_bousai"
+            href="https://twitter.com/AomoriPref"
             target="_blank"
             rel="noopener"
             class="SideNavigation-SocialLink"
@@ -70,6 +72,7 @@
               <img src="/twitter.png" alt="Twitter" />
             </picture>
           </a>
+          <!--
           <a
             href="https://www.facebook.com/tochokoho"
             target="_blank"
@@ -81,8 +84,9 @@
               <img src="/facebook.png" alt="Facebook" />
             </picture>
           </a>
+          -->
           <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/covid19-aomori/website"
             target="_blank"
             rel="noopener"
             class="SideNavigation-SocialLink"
@@ -105,7 +109,7 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 @fukuiretu
+          2020 Aomori Hackers
         </small>
       </footer>
     </div>
@@ -167,12 +171,12 @@ export default Vue.extend({
         //   divider: true
         // },
         // {
-        //   title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
+        //   title: this.$t('青森県新型コロナウイルス感染症対策本部報'),
         //   link:
         //     'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
         // },
         // {
-        //   title: this.$t('東京都主催等 中止又は延期するイベント等'),
+        //   title: this.$t('青森県主催等 中止又は延期するイベント等'),
         //   link:
         //     'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
         // },
@@ -316,6 +320,10 @@ export default Vue.extend({
   @include lessThan($tiny) {
     width: 100px;
   }
+
+  @media screen and (max-width: 480px) {
+    width: 10rem;
+  }
 }
 
 .SideNavigation-HeaderText {
@@ -326,6 +334,11 @@ export default Vue.extend({
 
   @include lessThan($tiny) {
     margin: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-left: 0;
+    font-size: 0.7rem;
   }
 }
 
